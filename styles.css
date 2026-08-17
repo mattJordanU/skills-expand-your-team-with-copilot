@@ -1,0 +1,338 @@
+/* FN Queensland Imagery - Rainforest Canopy Theme */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rainforest-dark: #1a3a2e;
+    --rainforest-green: #2d6a4f;
+    --canopy-light: #52b788;
+    --vine-color: #3d5a47;
+    --earth-brown: #8b6f47;
+    --sunset-gold: #d4a574;
+    --accent-green: #40916c;
+    --text-dark: #0b1f15;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, var(--rainforest-dark) 0%, var(--rainforest-green) 100%);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Rainforest Container */
+.rainforest-container {
+    position: relative;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header with decorative vines */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.header-vines h1 {
+    font-size: 3em;
+    color: var(--rainforest-dark);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-vines p {
+    font-size: 1.2em;
+    color: var(--rainforest-green);
+    font-style: italic;
+}
+
+/* Decorative vines */
+.vine {
+    position: absolute;
+    background: var(--vine-color);
+    opacity: 0.3;
+    border-radius: 50px;
+}
+
+.vine-left {
+    width: 100px;
+    height: 400px;
+    top: -200px;
+    left: 50px;
+    transform: rotate(-15deg);
+}
+
+.vine-right {
+    width: 100px;
+    height: 400px;
+    top: -200px;
+    right: 50px;
+    transform: rotate(15deg);
+}
+
+/* Navigation */
+.category-nav {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.category-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-link {
+    text-decoration: none;
+    color: white;
+    background: var(--rainforest-green);
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    border: 2px solid transparent;
+}
+
+.category-link:hover {
+    background: var(--canopy-light);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Canopy Gallery */
+.canopy-gallery {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.97);
+    border-radius: 20px;
+    padding: 60px 30px 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.canopy-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(180deg, rgba(83, 183, 136, 0.1) 0%, transparent 100%);
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.hanging-vines {
+    position: relative;
+    height: 100%;
+}
+
+.hanging-vines::before,
+.hanging-vines::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 150px;
+    background: var(--vine-color);
+    opacity: 0.2;
+    border-radius: 50px;
+}
+
+.hanging-vines::before {
+    left: 20%;
+    top: -50px;
+    transform: rotate(-5deg);
+}
+
+.hanging-vines::after {
+    right: 20%;
+    top: -50px;
+    transform: rotate(5deg);
+}
+
+/* Photo Sections */
+.photo-section {
+    margin: 50px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.photo-section h2 {
+    color: var(--rainforest-dark);
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--canopy-light);
+}
+
+/* Photo Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.photo-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.photo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+}
+
+.photo-info {
+    padding: 20px;
+    background: white;
+}
+
+.photo-info h3 {
+    color: var(--rainforest-dark);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.price {
+    font-size: 1.5em;
+    color: var(--sunset-gold);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.buy-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--rainforest-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.buy-btn:hover {
+    background: var(--canopy-light);
+    transform: scale(1.02);
+}
+
+/* Checkout Panel */
+.checkout-panel {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.checkout-panel h3 {
+    color: var(--rainforest-dark);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--canopy-light);
+    padding-bottom: 10px;
+}
+
+#cart-items {
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.cart-total {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--rainforest-dark);
+    text-align: right;
+    margin: 20px 0;
+    padding: 15px 0;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--sunset-gold);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.checkout-btn:hover {
+    background: #c99a63;
+}
+
+.delivery-note {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout-panel {
+        position: static;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .header-vines h1 {
+        font-size: 2em;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
