@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FN Queensland Imagery - Digital Rainforest Photography</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="rainforest-container">
+        <!-- Header with vines -->
+        <header class="header-vines">
+            <div class="vine vine-left"></div>
+            <div class="vine vine-right"></div>
+            <h1>FN Queensland Imagery</h1>
+            <p>Authentic Far North Queensland Rainforest Photography</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="category-nav">
+            <ul>
+                <li><a href="#landscape" class="category-link">Landscapes</a></li>
+                <li><a href="#sunsets" class="category-link">Sunsets</a></li>
+                <li><a href="#amphibians" class="category-link">Amphibians</a></li>
+                <li><a href="#wildlife" class="category-link">Wildlife</a></li>
+                <li><a href="#canopy" class="category-link">Canopy Views</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Photo Grid suspended in canopy -->
+        <main class="canopy-gallery">
+            <div class="canopy-backdrop">
+                <div class="hanging-vines"></div>
+            </div>
+
+            <!-- Landscape Section -->
+            <section id="landscape" class="photo-section">
+                <h2>Landscapes</h2>
+                <div class="photo-grid">
+                    <div class="photo-card">
+                        <img src="placeholder-landscape-1.jpg" alt="Rainforest Landscape">
+                        <div class="photo-info">
+                            <h3>Dense Rainforest Valley</h3>
+                            <p class="price">$3.99</p>
+                            <button class="buy-btn" data-photo-id="landscape-1">Buy Digital Print</button>
+                        </div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="placeholder-landscape-2.jpg" alt="Mountain Peaks">
+                        <div class="photo-info">
+                            <h3>Mountain Peaks Through Mist</h3>
+                            <p class="price">$4.99</p>
+                            <button class="buy-btn" data-photo-id="landscape-2">Buy Digital Print</button>
+                        </div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="placeholder-landscape-3.jpg" alt="Rainforest Stream">
+                        <div class="photo-info">
+                            <h3>Pristine Rainforest Stream</h3>
+                            <p class="price">$3.49</p>
+                            <button class="buy-btn" data-photo-id="landscape-3">Buy Digital Print</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sunsets Section -->
+            <section id="sunsets" class="photo-section">
+                <h2>Sunsets</h2>
+                <div class="photo-grid">
+                    <div class="photo-card">
+                        <img src="placeholder-sunset-1.jpg" alt="Golden Canopy Sunset">
+                        <div class="photo-info">
+                            <h3>Golden Canopy Sunset</h3>
+                            <p class="price">$4.99</p>
+                            <button class="buy-btn" data-photo-id="sunset-1">Buy Digital Print</button>
+                        </div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="placeholder-sunset-2.jpg" alt="Dusk Over Rainforest">
+                        <div class="photo-info">
+                            <h3>Dusk Over Rainforest</h3>
+                            <p class="price">$4.49</p>
+                            <button class="buy-btn" data-photo-id="sunset-2">Buy Digital Print</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Amphibians Section -->
+            <section id="amphibians" class="photo-section">
+                <h2>Amphibians</h2>
+                <div class="photo-grid">
+                    <div class="photo-card">
+                        <img src="placeholder-amphibian-1.jpg" alt="Tree Frog">
+                        <div class="photo-info">
+                            <h3>Vibrant Tree Frog</h3>
+                            <p class="price">$2.99</p>
+                            <button class="buy-btn" data-photo-id="amphibian-1">Buy Digital Print</button>
+                        </div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="placeholder-amphibian-2.jpg" alt="Rainforest Toad">
+                        <div class="photo-info">
+                            <h3>Rainforest Toad Portrait</h3>
+                            <p class="price">$2.49</p>
+                            <button class="buy-btn" data-photo-id="amphibian-2">Buy Digital Print</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Cart/Checkout Sidebar -->
+        <aside class="checkout-panel">
+            <h3>Your Cart</h3>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <p>Total: $<span id="total-price">0.00</span></p>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+            <p class="delivery-note">Digital files delivered instantly via email</p>
+        </aside>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
